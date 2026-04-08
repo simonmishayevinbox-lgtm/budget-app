@@ -1,9 +1,12 @@
+import "./globals.css";
+
 export const metadata = {
   title: "Budget",
   description: "My budget app",
+
   icons: {
-    icon: "/icon.png",
-    apple: "/icon.png",
+    icon: "/apple-icon-v2.png",
+    apple: "/apple-icon-v2.png",
   },
 };
 
@@ -15,35 +18,13 @@ export default function RootLayout({
   return (
     <html lang="he">
       <head>
-        {/* PWA בסיס */}
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#ff7a00" />
-
-        {/* אייפון (קריטי!) */}
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="black-translucent"
-        />
-        <meta name="apple-mobile-web-app-title" content="Budget App" />
-
-        {/* אייקון לאייפון */}
+        {/* חשוב לאייפון */}
         <link rel="apple-touch-icon" href="/icon.png" />
 
-        {/* רספונסיב */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="manifest" href="/manifest.json" />
       </head>
 
-      <body
-        style={{
-          margin: 0,
-          padding: 0,
-          background: "#0f0f0f",
-          color: "white",
-        }}
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
