@@ -1,6 +1,10 @@
 export const metadata = {
-  title: "Budget App",
-  description: "My personal finance app",
+  title: "Budget",
+  description: "My budget app",
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
